@@ -197,20 +197,15 @@ def create_dataset(dataset, resolution=None):
         return create_from_lmdb(data_dir, resolution)
     
     if dataset in predefined_datasets:
-        unzip_from_url(data_dir, 'https://hanlab.mit.edu/projects/data-efficient-gans/datasets/{}.zip'.format(dataset))
+        unzip_from_url(data_dir, 'https://github.com/Rainbowbarkbark/POSTED/raw/IU/data_images/{}.zip'.format(dataset))
     return create_from_images(data_dir, resolution)
 
 
 predefined_datasets = [
-    '100-shot-obama',
-    '100-shot-grumpy_cat',
-    '100-shot-panda',
-    '100-shot-bridge_of_sighs',
-    '100-shot-medici_fountain',
-    '100-shot-temple_of_heaven',
-    '100-shot-wuzhen',
-    'AnimalFace-cat',
-    'AnimalFace-dog',
+    '64resized_doggyface_female_100',
+    '128resized_doggyface_female_100',
+    '256resized_doggyface_female_100',
+    '512resized_doggyface_female_100',
 ]
 
 # ----------------------------------------------------------------------------
